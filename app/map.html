@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jazz Pixels</title>
+  <meta name="viewport" content="width=320">
+  <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+  <!-- BEGIN MAPS -->
+  <section class="maps" id="map">
+      
+        
+        
+  </section>
+  <div class="ellipse-icon__left">
+      <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect opacity="0.5" y="8" width="16" height="4" rx="1" fill="#FF781C"/>
+        <rect opacity="0.3" y="13" width="16" height="2" rx="1" fill="#FF781C"/>
+        <rect width="16" height="7" rx="1" fill="#FF781C"/>
+      </svg>       
+  </div>
+    <div class="ellipse-icon__right">
+        <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.5 0C2.91246 0 0 2.84906 0 6.35849C0 11.0377 6.5 18 6.5 18C6.5 18 13 11.0377 13 6.35849C13 2.84906 10.0875 0 6.5 0ZM6.5 9.15094C4.9184 9.15094 3.6454 7.90566 3.6454 6.35849C3.6454 4.81132 4.9184 3.56604 6.5 3.56604C8.0816 3.56604 9.3546 4.81132 9.3546 6.35849C9.3546 7.90566 8.06231 9.15094 6.5 9.15094Z" fill="#FF781C"/>
+          <path d="M6.5 0C2.91246 0 0 2.84906 0 6.35849C0 11.0377 6.5 18 6.5 18C6.5 18 13 11.0377 13 6.35849C13 2.84906 10.0875 0 6.5 0ZM6.5 9.15094C4.9184 9.15094 3.6454 7.90566 3.6454 6.35849C3.6454 4.81132 4.9184 3.56604 6.5 3.56604C8.0816 3.56604 9.3546 4.81132 9.3546 6.35849C9.3546 7.90566 8.06231 9.15094 6.5 9.15094Z" fill="#FF781C"/>
+          </svg>  
+    </div>
+  <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 9,
+		  styles:[
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#212121"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#212121"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.country",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.locality",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#181818"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#1b1b1b"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#2c2c2c"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#8a8a8a"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#373737"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#3c3c3c"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#4e4e4e"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#000000"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#3d3d3d"
+      }
+    ]
+  }
+]
+		  
+        });
+	}
+	  
+    </script>
+  <!-- END MAPS -->
+  <section class="feed-maps prokrutka" id="content">
+    <div class="feed-maps__title-ineer">
+        <div class="feed-maps__title">
+            Amsterdam
+        </div>
+        <div class="feed-maps__text">
+            Netherlands
+        </div>
+    </div>
+    <div class="feed-maps__booton" id="hideContent"></div>
+    <ul class="feed__list feed feed__list--maps" >
+      <li class="feed__item ">
+        <button class="feed__item-button">
+          <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.66241 11.9228L8.66246 11.9227L8.65544 11.9175C8.33349 11.6782 7.9255 11.5798 7.54018 11.5798C7.15107 11.5798 6.73976 11.6794 6.38729 11.889L6.36142 11.9044L6.33758 11.9228L0.551871 16.383L0.527245 16.402L0.505162 16.4239C0.50447 16.4246 0.503781 16.4252 0.503095 16.4259C0.501157 16.4047 0.5 16.3808 0.5 16.3542V1.06196C0.5 0.858338 0.566177 0.726895 0.646624 0.647158C0.727466 0.56703 0.862298 0.5 1.07143 0.5H13.9286C14.1377 0.5 14.2725 0.56703 14.3534 0.647158C14.4338 0.726895 14.5 0.858338 14.5 1.06196V16.3542C14.5 16.3773 14.4991 16.3977 14.4977 16.4155C14.4814 16.4059 14.4635 16.3942 14.4442 16.38L8.66241 11.9228Z"
+              fill="white" stroke="black" />
+          </svg>
+        </button>
+        <a href="#" class="feed__item-link">
+          <div class="feed__item-ineer feed__item--events">
+            <div class="feed__item__img-ineer">
+              <div class="bg__img-item"></div>
+              <img src="img/feed-img3.jpg" alt="foto" class="feed__item-img">
+            </div>
+            <div class="item__text-ineer item__text-ineer--events">
+              <div class="feed__item-title">King or queen of the circle 2018</div>
+              <div class="feed__item-text">13 October</div>
+            </div>
+            <svg class="feed__item--tick" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d)">
+              <circle cx="11.5" cy="7.5" r="5.5" fill="#2E61E5"/>
+              <circle cx="11.5" cy="7.5" r="5.5" fill="#2459E2"/>
+              </g>
+              <defs>
+              <filter id="filter0_d" x="0" y="0" width="23" height="23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="3"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+              </filter>
+              </defs>
+            </svg>   
+          </div>
+        </a>
+      </li>
+      <li class="feed__item ">
+        <button class="feed__item-button">
+          <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.66241 11.9228L8.66246 11.9227L8.65544 11.9175C8.33349 11.6782 7.9255 11.5798 7.54018 11.5798C7.15107 11.5798 6.73976 11.6794 6.38729 11.889L6.36142 11.9044L6.33758 11.9228L0.551871 16.383L0.527245 16.402L0.505162 16.4239C0.50447 16.4246 0.503781 16.4252 0.503095 16.4259C0.501157 16.4047 0.5 16.3808 0.5 16.3542V1.06196C0.5 0.858338 0.566177 0.726895 0.646624 0.647158C0.727466 0.56703 0.862298 0.5 1.07143 0.5H13.9286C14.1377 0.5 14.2725 0.56703 14.3534 0.647158C14.4338 0.726895 14.5 0.858338 14.5 1.06196V16.3542C14.5 16.3773 14.4991 16.3977 14.4977 16.4155C14.4814 16.4059 14.4635 16.3942 14.4442 16.38L8.66241 11.9228Z"
+              fill="white" stroke="black" />
+          </svg>
+        </button>
+        <a href="#" class="feed__item-link">
+          <div class="feed__item-ineer feed__item--events">
+            <div class="feed__item__img-ineer">
+              <div class="bg__img-item"></div>
+              <img src="img/maps-item21.png" alt="foto" class="feed__item-img">
+            </div>
+            <div class="item__text-ineer item__text-ineer--events">
+              <div class="feed__item-title">Temple rock: 5 year anniversary 2018</div>
+              <div class="feed__item-text">12 October</div>
+            </div>
+            <svg class="feed__item--boockmark" width="9" height="10" viewBox="0 0 9 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z"
+                fill="#FF781C" />
+            </svg>
+          </div>
+        </a>
+      </li>
+      <li class="feed__item ">
+        <button class="feed__item-button">
+          <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.66241 11.9228L8.66246 11.9227L8.65544 11.9175C8.33349 11.6782 7.9255 11.5798 7.54018 11.5798C7.15107 11.5798 6.73976 11.6794 6.38729 11.889L6.36142 11.9044L6.33758 11.9228L0.551871 16.383L0.527245 16.402L0.505162 16.4239C0.50447 16.4246 0.503781 16.4252 0.503095 16.4259C0.501157 16.4047 0.5 16.3808 0.5 16.3542V1.06196C0.5 0.858338 0.566177 0.726895 0.646624 0.647158C0.727466 0.56703 0.862298 0.5 1.07143 0.5H13.9286C14.1377 0.5 14.2725 0.56703 14.3534 0.647158C14.4338 0.726895 14.5 0.858338 14.5 1.06196V16.3542C14.5 16.3773 14.4991 16.3977 14.4977 16.4155C14.4814 16.4059 14.4635 16.3942 14.4442 16.38L8.66241 11.9228Z"
+              fill="white" stroke="black" />
+          </svg>
+        </button>
+        <a href="#" class="feed__item-link">
+          <div class="feed__item-ineer feed__item--events">
+            <div class="feed__item__img-ineer">
+              <div class="bg__img-item"></div>
+              <img src="img/maps-item3.jpg" alt="foto" class="feed__item-img">
+            </div>
+            <div class="item__text-ineer item__text-ineer--events">
+              <div class="feed__item-title">Soul Rockerz 20</div>
+              <div class="feed__item-text">11 October</div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="feed__item ">
+        <button class="feed__item-button">
+          <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.66241 11.9228L8.66246 11.9227L8.65544 11.9175C8.33349 11.6782 7.9255 11.5798 7.54018 11.5798C7.15107 11.5798 6.73976 11.6794 6.38729 11.889L6.36142 11.9044L6.33758 11.9228L0.551871 16.383L0.527245 16.402L0.505162 16.4239C0.50447 16.4246 0.503781 16.4252 0.503095 16.4259C0.501157 16.4047 0.5 16.3808 0.5 16.3542V1.06196C0.5 0.858338 0.566177 0.726895 0.646624 0.647158C0.727466 0.56703 0.862298 0.5 1.07143 0.5H13.9286C14.1377 0.5 14.2725 0.56703 14.3534 0.647158C14.4338 0.726895 14.5 0.858338 14.5 1.06196V16.3542C14.5 16.3773 14.4991 16.3977 14.4977 16.4155C14.4814 16.4059 14.4635 16.3942 14.4442 16.38L8.66241 11.9228Z"
+              fill="white" stroke="black" />
+          </svg>
+        </button>
+        <a href="#" class="feed__item-link">
+          <div class="feed__item-ineer feed__item--events">
+            <div class="feed__item__img-ineer">
+              <div class="bg__img-item"></div>
+              <img src="img/maps-item2.jpg" alt="foto" class="feed__item-img">
+            </div>
+            <div class="item__text-ineer item__text-ineer--events">
+              <div class="feed__item-title">Rockland's 10 year <br>hip-hop showcase </div>
+              <div class="feed__item-text">10 October</div>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- END FEED -->
+  <!-- BEGIN MENU -->
+  <section class="menu menu--maps">
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a href="#" id="showContent" >
+          <p class="menu__item-text">Feed</p>
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="map.html">
+          <p class="menu__item-text menu__item-text--hover">Events</p>
+          <span class="menu__item-ellipse menu__item-ellipse--maps">28</span>
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="#">
+          <p class="menu__item-text">Search</p>
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="#">
+          <p class="menu__item-text">Profile</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- END MENU -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuP-GQRiKN3okwuQ8PlXg85h4APlbJtSQ&callback=initMap"
+    async defer></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
