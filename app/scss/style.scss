@@ -397,5 +397,11 @@ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 .ellipse-icon__right{
     left: 82%;
     right:24px;
+    .menu__item-ellipse--maps{
+        top: -2px;
+        left: 29px;
+    }
+    
 }
+
 @import "media";

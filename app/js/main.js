@@ -5,6 +5,7 @@ $(function(){
         prevArrow: 'true',
         nextArrow: 'false',
         dots: true,
+       
         
     });
 
